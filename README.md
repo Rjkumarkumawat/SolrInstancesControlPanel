@@ -20,76 +20,17 @@ A secure, user-friendly web UI to start, stop, and restart Solr instances across
 
 ### 1. Clone the repo:
 ```bash
-git clone https://github.com/Rjkumarkumawat/SolrInstancesControlPanel.git
+git clone https://github.com/yourusername/solr-ui-tool.git
 cd solr-ui-tool
-
-
----
-#### 1. 📁 Folder Structure
-
-Ensure your project directory looks like this:
-
 ```
-solr-ui-tool/
-├── executor.py
-├── generate_solr_yaml.py
-├── solr_ui_streamlit.py
-├── solr_instances.yaml
-├── userconfig.yaml
-├── requirements.txt
-└── README.md
-```
-
----
-
-#### 2. 🧾 `requirements.txt`
-
-```txt
-streamlit
-paramiko
-pyyaml
-```
-
----
-
-#### 3. 📝 `README.md`
-
-````markdown
-# 🛠️ SolrOps Control Console
-
-A secure, user-friendly web UI to start, stop, and restart Solr instances across multiple servers — ideal for production clusters.
-
----
-
-## 🔑 Features
-
-- 🔐 Password-protected Streamlit UI
-- 🔄 Start / Stop / Restart Solr instances over SSH
-- 🗂️ Zone → Host → Port mapping
-- 📄 Auto-generates `solr_instances.yaml` from `userconfig.yaml`
-- ✅ Supports passwordless SSH and fallback password auth
-- 🌐 Designed for large-scale, multi-node Solr deployments
-- 💻 Tested in real production-like environments
-
----
-
-## 📦 Installation
-
-### 1. Clone the repo:
-```bash
-git clone https://github.com/Rjkumarkumawat/SolrInstancesControlPanel.git
-cd solr-ui-tool
-````
 
 ### 2. Create virtual environment:
-
 ```bash
 python3 -m venv myenv
 source myenv/bin/activate
 ```
 
 ### 3. Install dependencies:
-
 ```bash
 pip install -r requirements.txt
 ```
@@ -127,26 +68,23 @@ ui_config:
 ## 🚀 Usage
 
 ### 1. Generate `solr_instances.yaml`:
-
 ```bash
 python generate_solr_yaml.py
 ```
 
 ### 2. Run the web UI:
-
 ```bash
 streamlit run solr_ui_streamlit.py
 ```
 
-* Open your browser → `http://localhost:8501`
-* Login with the credentials from `userconfig.yaml`
+- Open your browser → `http://localhost:8501`
+- Login with the credentials from `userconfig.yaml`
 
 ---
 
 ## 🧪 Test Setup (Optional)
 
 To test locally:
-
 ```bash
 wget https://archive.apache.org/dist/lucene/solr/8.11.2/solr-8.11.2.tgz
 tar -xzf solr-8.11.2.tgz
@@ -163,4 +101,3 @@ solr2/bin/solr start -p 8984 -s solr2/server/solr
 ## 👨‍💻 Created By
 
 **Rajkumar Kumawat**
-
