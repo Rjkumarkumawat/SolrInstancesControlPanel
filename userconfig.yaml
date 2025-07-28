@@ -1,0 +1,47 @@
+# 🔐 UI Login Authentication
+ui_auth:
+  username: admin
+  password: solr1234
+
+# 🔧 Global SSH Defaults (optional)
+default_ssh:
+  ssh_user: ctadmin 
+  ssh_password: ctadmin@123
+
+# 💻 Node + Instance Configuration
+nodes:
+  - host: 192.168.0.101
+    zone: zone1
+    ssh_user: rajkumar
+    ssh_password: mans@123
+    ports: [8983, 8984]
+    paths: [/home/rajkumar/Desktop/Tools/solr_In/solr1, /home/rajkumar/Desktop/Tools/solr_In/solr2]
+nodes:
+  - host: 192.168.0.102
+    zone: zone2
+    ssh_user: rajkumar
+    ssh_password: mans@123
+    ports: [8983, 8984]
+    paths: [/home/rajkumar/Desktop/Tools/solr_In/solr1, /home/rajkumar/Desktop/Tools/solr_In/solr2]
+nodes:
+  - host: 192.168.0.103
+    zone: zone3
+    ssh_user: rajkumar
+    ssh_password: mans@123
+    ports: [8983, 8984]
+    paths: [/home/rajkumar/Desktop/Tools/solr_In/solr1, /home/rajkumar/Desktop/Tools/solr_In/solr2]
+nodes:
+  - host: 192.168.0.104
+    zone: 
+    ssh_user: rajkumar
+    ssh_password: mans@123
+    ports: [8983, 8984]
+    paths: [/home/rajkumar/Desktop/Tools/solr_In/solr1, /home/rajkumar/Desktop/Tools/solr_In/solr2]
+nodes:
+  - host: 192.168.0.105
+    zone:
+    ssh_user: rajkumar
+    ssh_password: mans@123
+    ports: [8983, 8984]
+    paths: [/home/rajkumar/Desktop/Tools/solr_In/solr1, /home/rajkumar/Desktop/Tools/solr_In/solr2]
+

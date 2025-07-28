@@ -1,0 +1,46 @@
+import yaml
+
+def generate_solr_instances(input_path='userconfig.yaml', output_path='solr_instances.yaml'):
+    with open(input_path, 'r') as f:
+        config = yaml.safe_load(f)
+
+    instances = []
+    default_ssh = config.get('default_ssh', {})
+    nodes = config.get('nodes', [])
+
+    if not isinstance(nodes, list):
+        raise ValueError("❌ Error: 'nodes' must be a list in userconfig.yaml")
+
+    for node in nodes:
+        host = node['host']
+        zone = node.get('zone')
+        ssh_user = node.get('ssh_user', default_ssh.get('ssh_user', 'root'))
+        ssh_password = node.get('ssh_password', default_ssh.get('ssh_password'))
+
+        ports = node['ports']
+        paths = node['paths']
+
+        if len(ports) != len(paths):
+            raise ValueError(f"❌ host {host}: Number of ports and paths must match")
+
+        for port, path in zip(ports, paths):
+            instances.append({
+                'host': host,
+                'port': port,
+                'solr_home': path,
+                'ssh_user': ssh_user,
+                'ssh_password': ssh_password,
+                'start_cmd': f"{path}/bin/solr start -p {port}",
+                'stop_cmd': f"{path}/bin/solr stop -p {port}",
+                'zone': zone
+            })
+
+    with open(output_path, 'w') as f:
+        yaml.dump({'instances': instances}, f, sort_keys=False)
+
+    print(f"✅ Generated {output_path} with {len(instances)} instance(s)")
+
+# CLI usage
+if __name__ == "__main__":
+    generate_solr_instances()
+

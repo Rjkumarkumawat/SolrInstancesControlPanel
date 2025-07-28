@@ -1,0 +1,81 @@
+instances:
+- host: 192.168.0.101
+  port: 8983
+  solr_home: /home/rajkumar/Desktop/Tools/solr_In/solr1
+  ssh_password: mans@123
+  ssh_user: rajkumar
+  start_cmd: /home/rajkumar/Desktop/Tools/solr_In/solr1/bin/solr start -p 8983
+  stop_cmd: /home/rajkumar/Desktop/Tools/solr_In/solr1/bin/solr stop -p 8983
+  zone: zone1
+- host: 192.168.0.101
+  port: 8984
+  solr_home: /home/rajkumar/Desktop/Tools/solr_In/solr2
+  ssh_password: mans@123
+  ssh_user: rajkumar
+  start_cmd: /home/rajkumar/Desktop/Tools/solr_In/solr2/bin/solr start -p 8984
+  stop_cmd: /home/rajkumar/Desktop/Tools/solr_In/solr2/bin/solr stop -p 8984
+  zone: zone1
+- host: 192.168.0.102
+  port: 8983
+  solr_home: /home/rajkumar/Desktop/Tools/solr_In/solr1
+  ssh_password: mans@123
+  ssh_user: rajkumar
+  start_cmd: /home/rajkumar/Desktop/Tools/solr_In/solr1/bin/solr start -p 8983
+  stop_cmd: /home/rajkumar/Desktop/Tools/solr_In/solr1/bin/solr stop -p 8983
+  zone: zone2
+- host: 192.168.0.102
+  port: 8984
+  solr_home: /home/rajkumar/Desktop/Tools/solr_In/solr2
+  ssh_password: mans@123
+  ssh_user: rajkumar
+  start_cmd: /home/rajkumar/Desktop/Tools/solr_In/solr2/bin/solr start -p 8984
+  stop_cmd: /home/rajkumar/Desktop/Tools/solr_In/solr2/bin/solr stop -p 8984
+  zone: zone2
+- host: 192.168.0.103
+  port: 8983
+  solr_home: /home/rajkumar/Desktop/Tools/solr_In/solr1
+  ssh_password: mans@123
+  ssh_user: rajkumar
+  start_cmd: /home/rajkumar/Desktop/Tools/solr_In/solr1/bin/solr start -p 8983
+  stop_cmd: /home/rajkumar/Desktop/Tools/solr_In/solr1/bin/solr stop -p 8983
+  zone: zone3
+- host: 192.168.0.103
+  port: 8984
+  solr_home: /home/rajkumar/Desktop/Tools/solr_In/solr2
+  ssh_password: mans@123
+  ssh_user: rajkumar
+  start_cmd: /home/rajkumar/Desktop/Tools/solr_In/solr2/bin/solr start -p 8984
+  stop_cmd: /home/rajkumar/Desktop/Tools/solr_In/solr2/bin/solr stop -p 8984
+  zone: zone3
+- host: 192.168.0.104
+  port: 8983
+  solr_home: /home/rajkumar/Desktop/Tools/solr_In/solr1
+  ssh_password: mans@123
+  ssh_user: rajkumar
+  start_cmd: /home/rajkumar/Desktop/Tools/solr_In/solr1/bin/solr start -p 8983
+  stop_cmd: /home/rajkumar/Desktop/Tools/solr_In/solr1/bin/solr stop -p 8983
+  zone: null
+- host: 192.168.0.104
+  port: 8984
+  solr_home: /home/rajkumar/Desktop/Tools/solr_In/solr2
+  ssh_password: mans@123
+  ssh_user: rajkumar
+  start_cmd: /home/rajkumar/Desktop/Tools/solr_In/solr2/bin/solr start -p 8984
+  stop_cmd: /home/rajkumar/Desktop/Tools/solr_In/solr2/bin/solr stop -p 8984
+  zone: null
+- host: 192.168.0.105
+  port: 8983
+  solr_home: /home/rajkumar/Desktop/Tools/solr_In/solr1
+  ssh_password: mans@123
+  ssh_user: rajkumar
+  start_cmd: /home/rajkumar/Desktop/Tools/solr_In/solr1/bin/solr start -p 8983
+  stop_cmd: /home/rajkumar/Desktop/Tools/solr_In/solr1/bin/solr stop -p 8983
+  zone: null
+- host: 192.168.0.105
+  port: 8984
+  solr_home: /home/rajkumar/Desktop/Tools/solr_In/solr2
+  ssh_password: mans@123
+  ssh_user: rajkumar
+  start_cmd: /home/rajkumar/Desktop/Tools/solr_In/solr2/bin/solr start -p 8984
+  stop_cmd: /home/rajkumar/Desktop/Tools/solr_In/solr2/bin/solr stop -p 8984
+  zone: null
